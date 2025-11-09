@@ -123,10 +123,16 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="outcome">תוצאות אירוע:</label>
-                <input type="text" id="outcome" name="תוצאות אירוע" value="א.נ.א.נ">
-            </div>
+          <div class="form-group">
+    <label for="outcome">תוצאות אירוע:</label>
+    <select id="outcome" name="תוצאות אירוע" required>
+        <option value="">בחר...</option>
+        <option value="א.נ.א.נ">א.נ.א.נ</option>
+        <option value="י.נ.א.נ">י.נ.א.נ</option>
+        <option value="א.נ.י.נ">א.נ.י.נ</option>
+        <option value="י.נ.י.נ">י.נ.י.נ</option>
+    </select>
+</div>
 
             <div class="form-group">
                 <label for="actionsTaken">פעולות שננקטו אחרי האירוע:</label>
@@ -145,6 +151,7 @@
 </body>
 
 </html>
+
 
 
 
