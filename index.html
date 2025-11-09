@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דיווח אירוע בטיחות</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #fff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .form-group input[type="datetime-local"] {
+            font-family: Arial, sans-serif;
+        }
+        .submit-btn {
+            background-color: #0056b3; /* צבע כחול צבאי / רשמי */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>דיווח ראשוני לאירוע בטיחות (כמעט ונפגע)</h1>
+        
+        <form action="https://formspree.io/f/xpwkaowe" method="POST">
+            
+            <div class="form-group">
+                <label for="fullName">שם מלא:</label>
+                <input type="text" id="fullName" name="שם מלא" required>
+            </div>
+
+            <div class="form-group">
+                <label for="personalNumber">מ.א:</label>
+                <input type="text" id="personalNumber" name="מ.א" required>
+            </div>
+
+            <div class="form-group">
+                <label for="unit">יחידה:</label>
+                <input type="text" id="unit" name="יחידה" value="אקדמיה" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">מיקום:</label>
+                <input type="text" id="location" name="מיקום" required>
+            </div>
+
+            <div class="form-group">
+                <label for="involved">מעורבים באירוע:</label>
+                <textarea id="involved" name="מעורבים באירוע"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="eventTime">תאריך ושעת האירוע:</label>
+                <input type="datetime-local" id="eventTime" name="תאריך ושעת האירוע" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">תיאור האירוע:</label>
+                <textarea id="description" name="תיאור האירוע" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="rootCause">סיבות שורש לאירוע:</label>
+                <textarea id="rootCause" name="סיבות שורש"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="severity">חומרת האירוע:</label>
+                <select id="severity" name="חומרת האירוע" required>
+                    <option value="">בחר...</option>
+                    <option value="קל">קל</option>
+                    <option value="בינוני">בינוני</option>
+                    <option value="קשה">קשה</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="outcome">תוצאות אירוע:</label>
+                <input type="text" id="outcome" name="תוצאות אירוע" value="א.נ.א.נ">
+            </div>
+
+            <div class="form-group">
+                <label for="actionsTaken">פעולות שננקטו אחרי האירוע:</label>
+                <textarea id="actionsTaken" name="פעולות שננקטו"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="recommendations">המלצות להמשך/למניעת התאונה:</label>
+                <textarea id="recommendations" name="המלצות"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">שלח דיווח</button>
+
+        </form>
+    </div>
+</body>
+</html>
